@@ -37,12 +37,14 @@
                 <th>ID</th>
                 <th>성</th>
                 <th>명</th>
+                <th>담당자</th>
                 <th colspan="2">편집</th>
             </tr>
             <tr th:each="customer : ${customers}">
                 <td th:text="${customer.id}">100</td>
                 <td th:text="${customer.firstName}">홍</td>
                 <td th:text="${customer.lastName}">길동</td>
+                <td th:text="${coutomer.user.username}">duke</td>
                 <td>
                     <form th:action="@{/customers/edit}" method="get">
                         <input class="btn btn-default" type="submit" name="form" value="편집" />
